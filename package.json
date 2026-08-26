@@ -1,0 +1,32 @@
+{
+  "name": "lpr-agency",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "framer-motion": "^11.2.10",
+    "lucide-react": "^0.383.0",
+    "next": "14.2.3",
+    "react": "^18",
+    "react-countup": "^6.5.3",
+    "react-dom": "^18",
+    "react-fast-marquee": "^1.6.5",
+    "react-intersection-observer": "^9.10.3",
+    "swiper": "^11.2.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
+    "@babel/preset-react": "^7.29.7",
+    "autoprefixer": "^10.5.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^3.4.1"
+  }
+}
