@@ -56,11 +56,14 @@ export default function Navbar() {
           alignItems: "center",
           justifyContent: "space-between",
           gap: "16px",
-          backgroundColor: "#BFDBFE",
+          backgroundColor: "rgba(255,255,255,0.9)",
+          border: "1px solid rgba(15,23,42,0.06)",
+          backdropFilter: "blur(10px)",
+          WebkitBackdropFilter: "blur(10px)",
           borderRadius: "50px",
           padding: "8px 8px 8px 20px",
           minWidth: "260px",
-          boxShadow: "0 8px 24px rgba(30,58,138,0.18)",
+          boxShadow: "0 8px 30px rgba(15,23,42,0.10)",
         }}
       >
         {/* Left: Logo */}
@@ -94,7 +97,7 @@ export default function Navbar() {
             width: "34px",
             height: "34px",
             borderRadius: "50%",
-            backgroundColor: "#1E3A8A",
+            backgroundColor: "#4f6ffd",
             border: "none",
             cursor: "pointer",
             display: "flex",
@@ -120,9 +123,12 @@ export default function Navbar() {
           top: "calc(100% + 10px)",
           right: 0,
           width: "220px",
-          backgroundColor: "#BFDBFE",
+          backgroundColor: "rgba(255,255,255,0.96)",
+          border: "1px solid rgba(15,23,42,0.06)",
+          backdropFilter: "blur(10px)",
+          WebkitBackdropFilter: "blur(10px)",
           borderRadius: "20px",
-          boxShadow: "0 12px 30px rgba(30,58,138,0.2)",
+          boxShadow: "0 12px 34px rgba(15,23,42,0.14)",
           padding: "14px",
           display: "flex",
           flexDirection: "column",
@@ -143,7 +149,7 @@ export default function Navbar() {
               padding: "10px 12px",
               borderRadius: "10px",
               backgroundColor:
-                activeLink === href ? "rgba(30,58,138,0.1)" : "transparent",
+                activeLink === href ? "rgba(79,111,253,0.08)" : "transparent",
             }}
           >
             <p
@@ -153,7 +159,7 @@ export default function Navbar() {
                 fontWeight: "500",
                 letterSpacing: "-0.02em",
                 margin: 0,
-                color: activeLink === href ? "#1D4ED8" : "rgba(15,23,42,0.75)",
+                color: activeLink === href ? "#4f6ffd" : "rgba(15,23,42,0.7)",
                 transition: "color 0.2s ease",
               }}
             >
@@ -173,7 +179,7 @@ export default function Navbar() {
             alignItems: "center",
             justifyContent: "center",
             padding: "10px 16px",
-            backgroundColor: "#1E3A8A",
+            backgroundColor: "#4f6ffd",
             borderRadius: "50px",
           }}
         >
