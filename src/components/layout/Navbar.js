@@ -15,12 +15,43 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [activeLink, setActiveLink] = useState("/");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const pathname = usePathname();
   const menuRef = useRef(null);
+  const lastScrollY = useRef(0);
+  const isHome = pathname === "/";
 
   useEffect(() => {
     setActiveLink(pathname);
   }, [pathname]);
+
+  // Hide on scroll-down, show on scroll-up — only on the homepage.
+  // On any other page the navbar just stays visible (no hide behavior).
+  useEffect(() => {
+    if (!isHome) {
+      setIsVisible(true);
+      return;
+    }
+
+    lastScrollY.current = window.scrollY;
+
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      const scrolledDown = currentY > lastScrollY.current;
+      const pastThreshold = currentY > 80; // don't hide right at the very top
+
+      if (scrolledDown && pastThreshold) {
+        setIsVisible(false);
+        setIsMenuOpen(false); // close dropdown if it was open while hiding
+      } else {
+        setIsVisible(true);
+      }
+      lastScrollY.current = currentY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isHome]);
 
   // Close the dropdown when clicking outside of it
   useEffect(() => {
@@ -44,7 +75,12 @@ export default function Navbar() {
         position: "fixed",
         top: "20px",
         left: "50%",
-        transform: "translateX(-50%)",
+        transform: isVisible
+          ? "translateX(-50%) translateY(0)"
+          : "translateX(-50%) translateY(-120px)",
+        opacity: isVisible ? 1 : 0,
+        pointerEvents: isVisible ? "auto" : "none",
+        transition: "transform 0.35s ease, opacity 0.3s ease",
         zIndex: 999,
       }}
       ref={menuRef}
