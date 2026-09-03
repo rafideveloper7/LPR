@@ -56,11 +56,11 @@ export default function Navbar() {
           alignItems: "center",
           justifyContent: "space-between",
           gap: "16px",
-          backgroundColor: "#000000",
+          backgroundColor: "#BFDBFE",
           borderRadius: "50px",
           padding: "8px 8px 8px 20px",
           minWidth: "260px",
-          boxShadow: "0 8px 24px rgba(0,0,0,0.25)",
+          boxShadow: "0 8px 24px rgba(30,58,138,0.18)",
         }}
       >
         {/* Left: Logo */}
@@ -80,7 +80,7 @@ export default function Navbar() {
               height: "30px",
               width: "auto",
               objectFit: "contain",
-              filter: "brightness(0) invert(1)", // renders the logo white on the black pill
+              filter: "brightness(0)", // renders the logo black/dark for contrast on the light blue pill
             }}
           />
         </Link>
@@ -94,7 +94,7 @@ export default function Navbar() {
             width: "34px",
             height: "34px",
             borderRadius: "50%",
-            backgroundColor: "#ffffff",
+            backgroundColor: "#1E3A8A",
             border: "none",
             cursor: "pointer",
             display: "flex",
@@ -106,9 +106,9 @@ export default function Navbar() {
           }}
         >
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <circle cx="5" cy="12" r="2" fill="#000" />
-            <circle cx="12" cy="12" r="2" fill="#000" />
-            <circle cx="19" cy="12" r="2" fill="#000" />
+            <circle cx="5" cy="12" r="2" fill="#fff" />
+            <circle cx="12" cy="12" r="2" fill="#fff" />
+            <circle cx="19" cy="12" r="2" fill="#fff" />
           </svg>
         </button>
       </div>
@@ -120,9 +120,9 @@ export default function Navbar() {
           top: "calc(100% + 10px)",
           right: 0,
           width: "220px",
-          backgroundColor: "#000000",
+          backgroundColor: "#BFDBFE",
           borderRadius: "20px",
-          boxShadow: "0 12px 30px rgba(0,0,0,0.3)",
+          boxShadow: "0 12px 30px rgba(30,58,138,0.2)",
           padding: "14px",
           display: "flex",
           flexDirection: "column",
@@ -143,7 +143,7 @@ export default function Navbar() {
               padding: "10px 12px",
               borderRadius: "10px",
               backgroundColor:
-                activeLink === href ? "rgba(255,255,255,0.08)" : "transparent",
+                activeLink === href ? "rgba(30,58,138,0.1)" : "transparent",
             }}
           >
             <p
@@ -153,7 +153,7 @@ export default function Navbar() {
                 fontWeight: "500",
                 letterSpacing: "-0.02em",
                 margin: 0,
-                color: activeLink === href ? "#4f6ffd" : "rgba(255,255,255,0.85)",
+                color: activeLink === href ? "#1D4ED8" : "rgba(15,23,42,0.75)",
                 transition: "color 0.2s ease",
               }}
             >
@@ -173,7 +173,7 @@ export default function Navbar() {
             alignItems: "center",
             justifyContent: "center",
             padding: "10px 16px",
-            backgroundColor: "#ffffff",
+            backgroundColor: "#1E3A8A",
             borderRadius: "50px",
           }}
         >
@@ -183,7 +183,7 @@ export default function Navbar() {
               fontSize: "14px",
               fontWeight: "600",
               margin: 0,
-              color: "#000000",
+              color: "#ffffff",
             }}
           >
             Book a call
