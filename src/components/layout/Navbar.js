@@ -77,7 +77,7 @@ export default function Navbar() {
             src="https://res.cloudinary.com/dtsn7jlsf/image/upload/v1787637175/Black_and_Red_Clean_Bold_Signature_Typography_Logo__2___1___1_-removebg-preview_b2nevr.png"
             alt="Logo"
             style={{
-              height: "20px",
+              height: "30px",
               width: "auto",
               objectFit: "contain",
               filter: "brightness(0) invert(1)", // renders the logo white on the black pill
